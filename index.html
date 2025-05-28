@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R2-D2's Morse Code Translator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>R2-D2's Morse Code Translator</h1>
+        <div id="status-display">
+          <span id="sound-status">Sound: ON</span> ⎍⎍⎍
+          <span id="speed-status">Speed: 20 WPM</span> ⎍⎍⎍
+          <span id="visual-status">Visual: ON</span>
+        </div>
+      </header>
+
+      <main>
+        <div class="menu">
+          <button id="text-to-morse">1. Text to Morse Code</button>
+          <button id="morse-to-text">2. Morse Code to Text</button>
+          <button id="toggle-sound">3. Toggle Sound</button>
+          <button id="toggle-visual">4. Toggle Visual Feedback</button>
+          <button id="adjust-speed">5. Adjust Speed</button>
+        </div>
+
+        <div id="converter-section" class="hidden">
+          <div id="text-to-morse-section">
+            <h2>Text to Morse Code</h2>
+            <textarea
+              id="text-input"
+              placeholder="Enter text to convert to Morse code"
+            ></textarea>
+            <button id="convert-text">Convert</button>
+            <div class="result">
+              <h3>Morse Code:</h3>
+              <div id="morse-output"></div>
+              <div id="visual-feedback"></div>
+            </div>
+          </div>
+
+          <div id="morse-to-text-section" class="hidden">
+            <h2>Morse Code to Text</h2>
+            <textarea
+              id="morse-input"
+              placeholder="Enter Morse code (space between letters, / between words)"
+            ></textarea>
+            <button id="convert-morse">Convert</button>
+            <div class="result">
+              <h3>Text:</h3>
+              <div id="text-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="speed-adjustment" class="hidden">
+          <h2>Adjust Speed</h2>
+          <p>Enter new speed (5-30 WPM):</p>
+          <input type="number" id="speed-input" min="5" max="30" value="20" />
+          <button id="set-speed">Set Speed</button>
+        </div>
+      </main>
+
+      <footer>
+        <p>May the Force be with you!</p>
+      </footer>
+    </div>
+
+    <audio id="morse-audio" src=""></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
