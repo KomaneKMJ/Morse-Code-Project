@@ -1,4 +1,7 @@
 
+
+![Screenshot 2025-06-05 100755](https://github.com/user-attachments/assets/cb4771a8-e427-4691-b0ec-f5eaca4fe1c6)
+
 Project Link
 https://komanekmj.github.io/Morse-Code-Project/
 ## Features Implemented ✨
